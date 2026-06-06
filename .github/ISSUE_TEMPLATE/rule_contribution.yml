@@ -1,0 +1,79 @@
+name: 规则贡献
+description: 贡献新的技术识别规则，或修正已有规则。
+title: 'rule: '
+labels: ['rule']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请尽量提供稳定、低误报的线索。资源路径、响应头、全局变量、DOM 标记、CSS 类名都可以作为规则依据。
+  - type: input
+    id: tech_name
+    attributes:
+      label: 技术名称
+      placeholder: '例如：ExampleCMS'
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类
+      options:
+        - 前端框架
+        - UI / CSS 框架
+        - 前端库
+        - 构建与运行时
+        - CDN / 托管
+        - Web 服务器
+        - 后端 / 服务器框架
+        - 开发语言 / 运行时
+        - 网站程序
+        - 主题 / 模板
+        - 网站源码线索
+        - 探针 / 监控
+        - RSS / 订阅
+        - SaaS / 第三方服务
+        - 第三方登录 / OAuth
+        - 支付系统
+        - 广告 / 营销
+        - 统计 / 分析
+        - 其他库
+    validations:
+      required: true
+  - type: input
+    id: kind
+    attributes:
+      label: 类型说明
+      placeholder: '例如：CMS / 电商系统 / 第三方支付 / 统计平台'
+  - type: textarea
+    id: patterns
+    attributes:
+      label: 匹配规则
+      description: 每行一个关键词或正则。请说明应匹配 URL、HTML、响应头还是动态资源。
+      placeholder: "examplecms\\.js\nx-generator:.*examplecms\n/wp-content/themes/example/"
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 真实样例 / 证据
+      description: 提供官网、测试页面、响应头、源码片段或截图。敏感信息请脱敏。
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: 建议置信度
+      options:
+        - 高
+        - 中
+        - 低
+    validations:
+      required: true
+  - type: input
+    id: official_url
+    attributes:
+      label: 官网 / 仓库 URL
+      placeholder: 'https://example.com'
