@@ -1,0 +1,23 @@
+name: 反馈
+description: 反馈使用体验、识别结果或项目文档问题。
+title: 'feedback: '
+labels: ['feedback']
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: 反馈内容
+      description: 请说明你遇到的场景、当前体验和希望改进的地方。
+      placeholder: '我在使用 ... 时发现 ...'
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 插件版本
+      placeholder: '例如：v1.0.1'
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充上下文
+      description: 可选。相关网站、截图、原始线索或其他说明。
