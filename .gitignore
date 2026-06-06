@@ -1,0 +1,43 @@
+# Local dependencies and caches
+node_modules/
+.cache/
+.parcel-cache/
+.vite/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+docs/public/icon.svg
+
+# Build and packaged extension output
+dist/
+dist-firefox/
+build/
+release/
+releases/
+artifacts/
+public/injected/
+*.zip
+*.crx
+*.xpi
+*.pem
+
+# Test output and local reports
+coverage/
+test-results/
+playwright-report/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local-only scripts and scratch tools
+tools/
+scripts/
+tmp/
+temp/
+*.local.*
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
