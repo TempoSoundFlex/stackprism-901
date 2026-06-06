@@ -1,0 +1,45 @@
+name: Bug 反馈
+description: 报告插件异常、识别错误或界面问题。
+title: 'bug: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请尽量提供可复现的信息，涉及敏感站点时可以脱敏 URL。
+  - type: input
+    id: version
+    attributes:
+      label: 插件版本
+      description: 可以在插件弹窗或设置页标题旁查看。
+      placeholder: '例如：v1.0.1'
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器与系统
+      placeholder: '例如：Chrome 124 / Windows 11'
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 描述发生了什么，以及你原本期望发生什么。
+      placeholder: "实际结果：...\n期望结果：..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: "1. 打开 ...\n2. 点击 ...\n3. 出现 ..."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 截图 / 控制台 / 原始线索
+      description: 可以粘贴截图、错误日志或插件原始 JSON 片段。
+      render: text
