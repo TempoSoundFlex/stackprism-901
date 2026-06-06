@@ -1,0 +1,25 @@
+name: 建议
+description: 提出新功能、交互优化或维护方式建议。
+title: 'feat: '
+labels: ['enhancement']
+body:
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议内容
+      description: 说明你希望增加或调整什么。
+      placeholder: '希望支持 ...'
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 使用场景 / 原因
+      description: 说明这个建议解决什么问题，或能减少什么操作成本。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 你考虑过的替代方案
+      description: 可选。如果有其他实现方式，也可以一起写。
