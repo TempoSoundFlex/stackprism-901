@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub 仓库
+    url: https://github.com/setube/stackprism
+    about: 查看项目代码、提交记录和最新说明。
